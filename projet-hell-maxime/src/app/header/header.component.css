@@ -1,0 +1,29 @@
+/* header.component.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8c00ff56;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  
+  nav span {
+    margin-left: auto;
+  }
+  

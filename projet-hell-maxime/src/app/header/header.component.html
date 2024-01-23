@@ -1,0 +1,16 @@
+<!-- header.component.html -->
+<header>
+    <h1>Boutique des Dofus de Dofus</h1>
+    <nav>
+      <a href="/catalogue">Catalogue</a>
+      <!-- Affichage simplifié des produits dans le panier -->
+      <div *ngIf="cartProducts$ | async as cartProducts; else noProducts">
+        Articles dans le panier: 
+        <ul>
+          <li *ngFor="let product of cartProducts">{{ product.name }} - {{ product.price }}€</li>
+        </ul>
+      </div>
+      <ng-template #noProducts>Aucun produit dans le panier</ng-template>
+    </nav>
+  </header>
+  
