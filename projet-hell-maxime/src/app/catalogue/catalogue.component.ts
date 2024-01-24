@@ -9,15 +9,13 @@ import { Product } from '../models/product.model';
   styleUrls: ['./catalogue.component.css']
 })
 export class CatalogueComponent {
-  // Exemple de produits, dans une application réelle, ils pourraient être récupérés depuis un service
   products: Product[] = [
     { id: 1, name: 'Dofus Emeraude', price: 15 },
     { id: 2, name: 'Dofus Ocre', price: 100 },
     { id: 3, name: 'Dofus Ebene', price: 150 },
     { id: 4, name: 'Dofus Ivoire', price: 160 },
     { id: 5, name: 'Dofus Turquoise', price: 10 },
-    { id: 6, name: 'Dofus Pourpre', price: 16 },
-    // Ajoutez d'autres produits ici
+    { id: 6, name: 'Dofus Pourpre', price: 16 }
   ];
 
   constructor(private store: Store) {}

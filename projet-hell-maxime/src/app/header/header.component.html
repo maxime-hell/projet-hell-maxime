@@ -1,16 +1,14 @@
-<!-- header.component.html -->
-<header>
-    <h1>Boutique des Dofus de Dofus</h1>
-    <nav>
-      <a href="/catalogue">Catalogue</a>
-      <!-- Affichage simplifié des produits dans le panier -->
-      <div *ngIf="cartProducts$ | async as cartProducts; else noProducts">
-        Articles dans le panier: 
-        <ul>
-          <li *ngFor="let product of cartProducts">{{ product.name }} - {{ product.price }}€</li>
-        </ul>
-      </div>
-      <ng-template #noProducts>Aucun produit dans le panier</ng-template>
-    </nav>
-  </header>
-  
+<header class="site-header">
+  <h1>Boutique des Dofus de Dofus</h1>
+  <nav class="site-navigation">
+    <a href="/catalogue" class="nav-link">Catalogue</a>
+    <a href="/login" class="nav-link">Connexion</a>
+    <div *ngIf="cartProducts$ | async as cartProducts; else noProducts" class="cart-summary">
+      Articles dans le panier: 
+      <ul class="cart-items">
+        <li *ngFor="let product of cartProducts">{{ product.name }} - {{ product.price }}€</li>
+      </ul>
+    </div>
+    <ng-template #noProducts><span class="no-products">Aucun produit dans le panier</span></ng-template>
+  </nav>
+</header>
